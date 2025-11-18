@@ -179,35 +179,23 @@ Tested on Python 3.11+
 
 # Project Structure
 
-- `multi_agent_support/
-│
-├── agents/
-│   ├── memory_agent.py
-│   ├── intent_agent.py
-│   ├── emotion_agent.py
-│   ├── reply_agent.py
-│   └── __init__.py
-│
-├── coordinator.py
-├── run_demo.py
-├── requirements.txt
-└── README.md`
+![Architecture](./Structure.png "Optional Title")
 
 # Workflow
  The complete Agent Shutton flow:
-1. **User sends a message**
-2. **Coordinator** receives message
-3. Passes to:
+**1.** **User sends a message**
+**2.** **Coordinator** receives message
+**3.** Passes to:
 - `  IntentAgent`
 - `  EmotionAgent`
 - `  MemoryAgent`
 
-4. Agents return:
+**4.** Agents return:
    - `Detected intent`
    - `Emotional tone`
    - `Context summary`
 
-5. **ReplyAgent** generates final answer
-6. **Coordinator sends reply back**
-7. **Memory updates conversation history**
-8. **Conversation continues smoothly with context and emotion-awareness**
+**5.** **ReplyAgent** generates final answer
+**6.** **Coordinator** sends reply back
+**7.** Memory updates conversation history
+**8.** Conversation continues smoothly with context and emotion-awareness
