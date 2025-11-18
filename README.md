@@ -103,25 +103,25 @@ This design ensures:
 
 ---
 
-# ### Essential Tools and Utilities
+# Essential Tools and Utilities
 
 Your project uses the following components:
 
-### 🔧 **Technologies**
+# 🔧 **Technologies**
 - Python 3  
 - Dataclasses  
 - Regex-based parsing  
 - JSON utilities  
 - Lightweight, dependency-free code  
 
-### 🔧 **Agents**
+# 🔧 **Agents**
 - `IntentAgent`  
 - `EmotionAgent`  
 - `MemoryAgent`  
 - `ReplyAgent`  
 - `Coordinator`  
 
-### 🔧 Optional Expansion Tools
+# 🔧 Optional Expansion Tools
 - FastAPI REST wrapper  
 - ADK Web Mode integration  
 - Logging utilities  
@@ -156,6 +156,58 @@ If I had more time, future upgrades would include:
 
 Tested on Python 3.11+
 
-```bash
-pip install -r requirements.txt
+========================================================================================
 
+
+- `{
+  "intent": "payment_issue",
+  "emotion": "angry",
+  "reply": "I'm sorry you're facing this. Please send your transaction ID. (Context: user:...)"
+}
+`              
+
+# Running the Agent in ADK Web Mode
+- `adk web `
+
+
+# This will:
+
+- `Launch browser interface`
+- `Show agent graph`
+- `Show reasoning traces`
+- `Allow live chat testing`
+
+# Project Structure
+
+- `multi_agent_support/
+│
+├── agents/
+│   ├── memory_agent.py
+│   ├── intent_agent.py
+│   ├── emotion_agent.py
+│   ├── reply_agent.py
+│   └── __init__.py
+│
+├── coordinator.py
+├── run_demo.py
+├── requirements.txt
+└── README.md`
+
+# Workflow
+ The complete Agent Shutton flow:
+1. **User sends a message**
+2. **Coordinator** receives message
+3. Passes to:
+- `  IntentAgent`
+- `  EmotionAgent`
+- `  MemoryAgent`
+
+4. Agents return:
+   - `Detected intent`
+   - `Emotional tone`
+   - `Context summary`
+
+5. **ReplyAgent** generates final answer
+6. **Coordinator sends reply back**
+7. **Memory updates conversation history**
+8. **Conversation continues smoothly with context and emotion-awareness**
