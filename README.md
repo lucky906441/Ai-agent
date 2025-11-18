@@ -47,4 +47,58 @@ This architecture ensures:
 ---
 
 # 🏗 Architecture
+![Architecture](./flow_adk_web.png "Optional Title")
+
+
+---
+
+# 🔧 Essential Tools & Utilities
+
+### **Languages & Libraries**
+- Python 3  
+- Dataclasses  
+- Regex  
+- JSON utilities  
+
+### **Core Agents**
+- `IntentAgent`
+- `EmotionAgent`
+- `MemoryAgent`
+- `ReplyAgent`
+- `Coordinator`
+
+### **Optional Enhancements**
+- FastAPI (REST API version)  
+- ADK Web Mode deployment  
+
+---
+
+# 🌟 Value Statement
+
+Agent Shutton provides:
+
+✔ Faster customer support  
+✔ Reduced operational cost  
+✔ Consistent & accurate answers  
+✔ Emotion-aware assistance  
+✔ Scalable automation  
+✔ Easy explainability (each agent has a clear role)  
+✔ Realistic human-like conversation flow  
+
+Perfect for enterprise support systems, apps, websites, and automated helpdesks.
+
+---
+
+# 🛠 Installation
+
+```bash
+git clone https://github.com/your-repo/multi_agent_support.git
+cd multi_agent_support
+pip install -r requirements.txt
+
+▶ Running the Agent (Normal Mode)
+python run_demo.py
+
+
+
 
